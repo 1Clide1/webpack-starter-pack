@@ -1,0 +1,6 @@
+{
+  "name": "webpack starter pack",
+  "short_name": "WSP",
+  "description": "this is just a webpack build that I have made, that fits my needs and wants and generally better than create react app.",
+  "icons": []
+}
