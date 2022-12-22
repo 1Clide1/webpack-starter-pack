@@ -69,7 +69,7 @@ module.exports = {
           'sass-loader',
         ],
       },
-
+      // this is for images
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset',
@@ -104,7 +104,7 @@ module.exports = {
   devtool: 'source-map',
 
   devServer: {
-    // contentbase is doesn't work now use static instead
+    // contentbase is deprecated use static instead
     static: './build',
     hot: true,
     port: 3000, // default 8000
