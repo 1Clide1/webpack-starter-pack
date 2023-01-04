@@ -69,6 +69,11 @@ module.exports = {
           'sass-loader',
         ],
       },
+      // looking for html
+      {
+        test: /index\.html$/i,
+        loader: 'html-loader',
+      },
       // this is for images
       {
         test: /\.(png|jpe?g|gif|ico|svg)$/i,
