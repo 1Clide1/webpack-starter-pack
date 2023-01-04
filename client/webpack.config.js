@@ -71,8 +71,10 @@ module.exports = {
       },
       // this is for images
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|ico|svg)$/i,
         type: 'asset',
+        exclude: /node_modules/,
+        use: ['file-loader?name=[name].[ext]'], // ?name=[name].[ext] is only necessary to preserve the original file name
       },
 
       //   module rules for bable
