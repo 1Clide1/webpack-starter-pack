@@ -18,6 +18,8 @@ const plugins = [
   new HtmlWebpackPlugin({
     // my index html file is in the public folder
     template: path.join(__dirname, 'public', 'index.html'),
+    // for production use
+    minify: true,
   }),
   new EslintPlugin(),
   new CompressionPlugin({
