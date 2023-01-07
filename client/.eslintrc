@@ -15,6 +15,10 @@
     "es2021": true
   },
   // needed to include ./index.js for the eslinter to properly work
-  "extends": ["./index.js", "airbnb", "airbnb/hooks"],
-  "rules": {}
+  "extends": ["airbnb", "airbnb/hooks"],
+  "rules": {
+    // removes a rule that wants named exports but i don't think that is worth stressing over
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "error"
+  }
 }
