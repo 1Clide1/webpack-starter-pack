@@ -2,23 +2,58 @@
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "requireConfigFile": false,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    },
+    "babelOptions": {
+      "parserOpts": {
+        "plugins": ["jsx"]
+      }
+    }
   },
   // for react to be more compatible
   "settings": {
     "react": {
       "version": "detect"
-    }
+    },
+    "ecmascript": "latest"
   },
+  // "plugins": ["@babel/preset-react"],
   "env": {
     "browser": true,
     "es2021": true
   },
-  // needed to include ./index.js for the eslinter to properly work
-  "extends": ["airbnb", "airbnb/hooks"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks"
+  ],
   "rules": {
-    // removes a rule that wants named exports but i don't think that is worth stressing over
+    // these two rules are here because i could not find a valid solution for these errors
     "import/prefer-default-export": "off",
-    "import/no-default-export": "error"
-  }
+    "import/no-default-export": "off",
+    // proper quotes rule, should have checked not sure how to specify single only for jsx as that is how i set up my priettier
+    "quotes": "off",
+    // just incase quotes doesn't work and i am using jsx
+    "jsx-quotes": "off",
+    "arrow-body-style": ["warn", "as-needed"],
+    "indent": "off",
+    // i use prietter to format my code, I understand the purpose so will just give a warning
+    "object-curly-newline": "warn",
+    // this rule might be useful so I would rather keep as a warning for case by case basis since sometimes I can't use const like the error seems to think i can
+    "prefer-const": "warn",
+    "no-duplicate-imports": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["test/*.spec.js"], // Or *.test.js
+      "rules": {
+        "require-jsdoc": "off"
+      }
+    }
+  ]
 }

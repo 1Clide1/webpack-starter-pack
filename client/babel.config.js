@@ -2,13 +2,12 @@
 
 const plugins = ['@babel/plugin-proposal-optional-chaining'];
 
-// previous code had some issues but the idea is that if i am not in production
-// mode and in serve mode then add the react refresh plugin
+// in serve mode add the react refresh plugin
 if (process.env.SERVE) {
   plugins.push('react-refresh/babel');
 }
 
-// like webpack contents get exported out
+// webpack contents get exported out
 module.exports = {
   // adding the babel preset
   presets: [
