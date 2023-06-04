@@ -1,7 +1,7 @@
 {
-  "name": "noteify",
+  "name": "webpack-starter-pack",
   "version": "1.0.0",
-  "description": "notes taking app with old tech stack",
+  "description": "this is a starter pack for any project using webpack website or app.",
   "private": true,
   "scripts": {
     "start": "webpack serve --mode development --open --hot --client-overlay",
