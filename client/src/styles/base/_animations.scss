@@ -1,0 +1,14 @@
+// this is where all the animation keyframes go
+
+// you don't need this file if you don't have to keep or use this file if you don't have a lot of animations
+
+// animation to rotate the webpack icon
+@keyframes icon-rotate {
+  0% {
+    rotate: z 0deg;
+  }
+
+  100% {
+    rotate: z 360deg;
+  }
+}
