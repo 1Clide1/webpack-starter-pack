@@ -1,8 +1,11 @@
 // import all of the partials/other sass files here
+// don't actually use import foward is here and then the use keyword is for more of a local import maybe a mixin or something needs to be used
 @forward './base/base';
 @forward './base/reset';
 @forward './base/typography';
 @forward './base/animations';
-@forward './partials/variables';
-@forward './partials/hero';
-@forward './partials/homepage';
+@forward './components/header';
+@forward './pages/homepage';
+@forward './utility/variables';
+@forward './utility/mixins';
+@forward './utility/functions';
