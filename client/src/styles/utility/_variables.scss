@@ -1,0 +1,9 @@
+// ultities folder (originally default name is abstracts) is where all the variables, mixins, functions, they all go here
+
+// here is where all the variables go, css variables are better than sass' version
+:root{
+  --bold-font: font-weight: 700;
+  --color1: rgb(102, 210, 247);
+  --color2: rgb(78, 136, 184);
+  --text-color: rgb(2, 34, 65);
+}
