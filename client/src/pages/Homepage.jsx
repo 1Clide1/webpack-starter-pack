@@ -1,16 +1,15 @@
-import '../styles/partials/_homepage.scss';
-import WebpackIcon from '../Assets/webpack-icon.png';
+import React from 'react';
 
-const Homepage = () => {
+import WebpackIcon from '../assets/webpack-icon.png';
+
+import '../styles/pages/_homepage.scss';
+
+function Homepage() {
   return (
     <body>
-      <img
-        className='webpack-icon'
-        src={WebpackIcon}
-        alt='webpack icon image'
-      />
+      <img className='webpack-icon' src={WebpackIcon} alt='main webpack logo' />
     </body>
   );
-};
+}
 
 export default Homepage;

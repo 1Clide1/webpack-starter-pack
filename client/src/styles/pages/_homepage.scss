@@ -1,8 +1,9 @@
+// these are where the layouts or styles for full pages go, meant to be deeper than this. technically this is set up like a component sass file.
+
 .webpack-icon {
   display: block;
   margin-inline: auto;
   margin-top: 1rem;
   max-height: 40em;
-  animation: icon-rotate 3s ease-in-out normal infinite none;
+  animation: icon-rotate 5s ease-in-out normal infinite none;
 }
-

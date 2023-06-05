@@ -1,10 +1,8 @@
-// -----------------------------------------------------------------------------
-// This file contains CSS helper classes.
-// -----------------------------------------------------------------------------
+// ****shouts out KittyGiraudel, using this boilerplate as the baseline for the helper sass****
 
-/**
- * Clear inner floats
- */
+// this is where you get rid of known browser bugs or just making styling more consistent and structured
+
+// clear the inner floats
 .clearfix::after {
   clear: both;
   content: '';
@@ -18,12 +16,12 @@
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: $max-width; /* 1 */
-  margin-left: auto; /* 2 */
-  margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
-  width: 100%; /* 1 */
+  max-width: 1180px; // need to do more research on why the max width was set to this number however leaving it here until I learn otherwise
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
 }
 
 /**
@@ -33,7 +31,7 @@
  */
 .hide-text {
   overflow: hidden;
-  padding: 0; /* 1 */
+  padding: 0;
   text-indent: 101%;
   white-space: nowrap;
 }
