@@ -6,9 +6,14 @@ import '../styles/pages/_homepage.scss';
 
 function Homepage() {
   return (
-    <body>
-      <img className='webpack-icon' src={WebpackIcon} alt='main webpack logo' />
-    </body>
+    <div aria-label='webpack logo container'>
+      <img
+        aria-label='webpack logo'
+        className='webpack-icon'
+        src={WebpackIcon}
+        alt='main webpack logo'
+      />
+    </div>
   );
 }
 
