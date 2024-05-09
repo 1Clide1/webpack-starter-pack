@@ -23,7 +23,7 @@ const plugins = [
     // for production use
     minify: true,
   }),
-  new EslintPlugin({ extensions: ['js', 'jsx'] }),
+  new EslintPlugin({ extensions: ['.ts', '.tsx', 'js', 'jsx'] }),
   new CompressionPlugin({
     algorithm: 'gzip',
   }),
@@ -48,7 +48,7 @@ module.exports = {
   mode,
 
   // entry point of my app
-  entry: './src/index.jsx',
+  entry: './src/index.tsx',
 
   //   setting the ouput of the webpack
   output: {
@@ -88,9 +88,8 @@ module.exports = {
 
       //   module rules for bable
       {
-        // updated regex because the previous regex seemed  to not work
-        test: /\.(js|jsx|ts|tsx)$/,
-        // this is supposed to be regex
+        // regex for babel
+        test: /\.(|ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -98,6 +97,11 @@ module.exports = {
           options: {
             cacheDirectory: true,
           },
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react', //for react
+            '@babel/preset-typescript', // Include preset for TypeScript
+          ],
         },
       },
     ],
@@ -109,7 +113,7 @@ module.exports = {
 
   //   possible js extensions
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
 
   devtool: 'source-map',
