@@ -6,11 +6,16 @@ import './styles/main.scss';
 
 // creating the root
 const container = document.getElementById('root');
-const root = createRoot(container);
+// get element by id can sometimes be null so this is a check
+if (container) {
+  const root = createRoot(container);
 
-// rendering out the root
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+  // rendering out the root
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  );
+} else {
+  console.error('Element with ID "root" not found.');
+}
