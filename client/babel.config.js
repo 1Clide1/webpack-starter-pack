@@ -1,6 +1,10 @@
 // config for babel
 
-const plugins = ['@babel/plugin-proposal-optional-chaining'];
+// added both since ther might be a possibility to have typescript and js files in a project
+const plugins = [
+  '@babel/plugin-transform-typescript',
+  '@babel/plugin-proposal-optional-chaining', //can remove if using no js
+];
 
 // in serve mode add the react refresh plugin
 if (process.env.SERVE) {
@@ -15,6 +19,7 @@ module.exports = {
     // in files only using JSX (no state or React methods)
     ['@babel/preset-react', { runtime: 'automatic' }],
     '@babel/preset-env',
+    '@babel/preset-typescript',
   ],
   plugins,
 };
