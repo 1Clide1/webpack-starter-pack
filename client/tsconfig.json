@@ -24,6 +24,6 @@
     // library options
     "lib": ["es2022", "dom", "dom.iterable"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "custom.d.ts"],
   "exclude": ["public/**"]
 }
