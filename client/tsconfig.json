@@ -1,14 +1,29 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    // options
+    "esModuleInterop": true,
+    "skipDefaultLibCheck": true, //false would check all the libraries in node modules
+    "verbatimModuleSyntax": true,
     "noImplicitAny": true,
     "removeComments": true,
-    "module": "es6",
-    "target": "es5",
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "target": "ES2022", //modern and stable B)
     "jsx": "react",
-    "allowJs": true,
-    "moduleResolution": "node",
-    "sourceMap": true
+    "allowJs": true, // allows importing javascript files, might still be useful
+
+    // transpiling stuff
+    "moduleResolution": "node", //since i am using webpack we use node!!
+    "module": "es6", //this is the oldest ecma script i want to be compatible
+    "sourceMap": true,
+    "outDir": "./build",
+    // stictness!!
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    // library options
+    "lib": ["es2022", "dom", "dom.iterable"]
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["public/**"]
 }
