@@ -1,18 +1,19 @@
 {
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": "tsconfig.json",
     "requireConfigFile": false,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
       "modules": true,
       "experimentalObjectRestSpread": true
-    },
-    "babelOptions": {
-      "parserOpts": {
-        "plugins": ["jsx"]
-      }
     }
+    // "babelOptions": {
+    //   "parserOpts": {
+    //     "plugins": ["jsx"]
+    //   }
+    // }
   },
   // for react to be more compatible
   "settings": {
@@ -21,7 +22,7 @@
     },
     "ecmascript": "latest"
   },
-  // "plugins": ["@babel/preset-react"],
+  "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "es2021": true
@@ -30,7 +31,8 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "airbnb",
-    "airbnb/hooks"
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
     // these two rules are here because i could not find a valid solution for these errors
